@@ -2,7 +2,8 @@
 # exit on error
 set -o errexit
 
-python -m pip install -r requirements.txt
+/opt/render/project/src/.venv/bin/python -m pip install --upgrade pip
+pip install -r requirements.txt
 
 python manage.py collectstatic --noinput
 python manage.py migrate
